@@ -1,0 +1,27 @@
+version: 0.0
+os: linux
+files:
+  - source: app/
+    destination: /home/iucorp/app/
+    file_exists_behavior: OVERWRITE
+permissions:
+  - object: /home/iucorp/app
+    pattern: "*.jar"
+    owner: iucorp
+    group: iucorp
+    mode: 755
+    type:
+      - file
+hooks:
+  ValidateService:
+    - location: scripts/health-check.sh
+      timeout: 180
+      runas: iucorp
+  ApplicationStart:
+    - location: scripts/startup.sh
+      timeout: 300
+      runas: iucorp
+  ApplicationStop:
+    - location: scripts/shutdown.sh
+      timeout: 300
+      runas: iucorp
