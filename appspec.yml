@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: app/
+  - source: build/libs/
     destination: /home/iucorp/app/
     file_exists_behavior: OVERWRITE
 permissions:
