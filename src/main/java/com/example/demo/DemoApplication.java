@@ -23,9 +23,9 @@ public class DemoApplication {
             InetAddress inetAddress = InetAddress.getLocalHost();
             String serverIp = inetAddress.getHostAddress();  // 서버 IP
             String hostName = inetAddress.getHostName();     // 서버 호스트명
-            return "Hello World 22 <br>- Server IP:" + serverIp + " (Host: " + hostName + ")";
+            return "Hello World 23 <br>- Server IP:" + serverIp + " (Host: " + hostName + ")";
         } catch (UnknownHostException e) {
-            return "Hello World 22 <br>- Cannot resolve server IP";
+            return "Hello World 23 <br>- Cannot resolve server IP";
         }
     }
 }
